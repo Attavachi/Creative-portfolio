@@ -105,3 +105,44 @@ body.dark-mode .menu-toggle span { background: var(--ink); }
   .theme-icon { font-size: 13px; }
   .nav { z-index: 15; }
 }
+
+
+/* Mobile layout refinement: keep portfolio cards and hero content inside phone screens. */
+html, body { max-width: 100%; overflow-x: clip; }
+img { max-width: 100%; }
+.project-grid, .project, .project-image, .project-meta { min-width: 0; }
+.project-image { width: 100%; }
+.project-meta > div { min-width: 0; }
+.project-meta h3, .project-meta p { overflow-wrap: anywhere; }
+
+@media (max-width: 620px) {
+  .topline { padding-left: 16px; padding-right: 16px; font-size: 8px; letter-spacing: .6px; }
+  .header { padding-left: 16px; padding-right: 12px; }
+  .wordmark { font-size: 27px; }
+  .theme-toggle { gap: 5px; margin-right: 0; padding: 7px 8px; }
+  .theme-toggle #themeLabel { font-size: 8px; }
+  .page-grid, .section { padding-left: 16px; padding-right: 16px; }
+  .hero { min-width: 0; }
+  .hero-bottom { flex-wrap: wrap; gap: 12px; }
+  .hero-image-wrap { margin-left: 8px; padding-left: 10px; }
+  .hero-image { height: clamp(230px, 78vw, 340px); }
+  .image-stamp { left: -12px; padding: 10px 12px; font-size: 9px; }
+  .image-caption { left: 10px; gap: 10px; font-size: 6.5px; }
+  .section-head { min-width: 0; }
+  .filters { gap: 6px; }
+  .filter-btn { padding: 8px 10px; font-size: 10px; }
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+  .project-image, .project-large .project-image { height: clamp(220px, 72vw, 330px); }
+  .design-overlay { font-size: clamp(42px, 12vw, 58px); }
+  .live-title { font-size: clamp(32px, 10vw, 45px); }
+  .print-note { font-size: clamp(24px, 7.5vw, 34px); }
+  .music-title { font-size: clamp(27px, 8.5vw, 38px); }
+  .music-note { font-size: 42px; }
+  .project-meta { gap: 8px; }
+  .project-meta h3 { font-size: 13px; }
+  .project-meta p { font-size: 9px; }
+  .contact-panel { min-width: 0; padding: 28px 16px; }
+  .whatsapp-link { max-width: 100%; gap: 10px; padding: 10px 12px; }
+  .footer { padding-left: 16px; padding-right: 16px; }
+}
+
