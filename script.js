@@ -37,7 +37,7 @@ contactForm.addEventListener('submit', event => {
     `Hi Derick,\n\n${form.get('message')}\n\nI'm ${form.get('name')} (${form.get('email')}).\nI'm getting in touch about: ${form.get('kind')}.`
   );
   // Replace this placeholder with your real email address.
-  window.location.href = `mailto:your-email@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:attavachiderick@gmail.com?subject=${subject}&body=${body}`;
   formHint.textContent = 'Your email app should open with a draft. Remember to replace your-email@example.com with your real email address.';
 });
 
